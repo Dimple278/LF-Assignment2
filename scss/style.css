@@ -181,4 +181,47 @@ img {
   font-size: 1.1rem;
   color: #a4a4a4;
   line-height: 40px;
+}
+.hero-section__flex-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.hero-section__item-list {
+  flex-basis: 250px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border: 1px solid red;
+  max-width: 100vw;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  padding: 20px;
+}
+.hero-section__card {
+  min-height: 200px;
+  min-width: 250px;
+  background-color: pink;
+}
+.hero-section__down-arrow {
+  margin-top: 50px;
+  min-height: 100px;
+  display: inline-block;
+}
+
+/* Popular Trends Section */
+.trend {
+  background-color: rgb(99, 201, 201);
+}
+.trend__title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: var(--theme-secondary);
 }/*# sourceMappingURL=style.css.map */
