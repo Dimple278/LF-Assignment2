@@ -390,4 +390,21 @@ img {
 .time-left__title {
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
+}
+
+/* other accessories */
+.other-accessories {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.other-accessories__item-list {
+  flex-wrap: wrap;
+}
+
+.other-accessories__item {
+  flex-basis: 700px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0;
 }/*# sourceMappingURL=style.css.map */
