@@ -387,3 +387,13 @@ img {
   flex-shrink: 1;
   padding: 0;
 }
+.new-arrivals {
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__card__detail {
+    background: rgba(55, 6, 101, 1);
+  }
+}

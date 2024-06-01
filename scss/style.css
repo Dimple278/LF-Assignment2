@@ -407,4 +407,12 @@ img {
   flex-grow: 1;
   flex-shrink: 1;
   padding: 0;
+}
+
+.new-arrivals__title {
+  font-size: 2rem;
+  text-align: center;
+}
+.new-arrivals__card__detail {
+  background: rgb(55, 6, 101);
 }/*# sourceMappingURL=style.css.map */
