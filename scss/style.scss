@@ -7,6 +7,10 @@
 html {
   font-size: 16px;
   font-family: sans-serif;
+  --primary-color: #f14a16;
+  $primary-color: var(--primary-color);
+  --theme-primary: black;
+  --theme-secondary: white;
 }
 
 img {
@@ -59,7 +63,7 @@ img {
   &__hamburger-icon-wrapper {
     width: 30px;
     height: 30px;
-    margin-right: 20px; /* Add space between hamburger icon and logo */
+    margin-right: 20px;
   }
 
   &__logo-wrapper {
@@ -81,8 +85,10 @@ img {
     height: 40px;
     background-color: white;
     @include flex($justify-content: start, $align-items: center);
-    border: 2px solid green;
 
+    &:active {
+      background-color: red;
+    }
     &__icon-wrapper {
       width: 24px;
       height: 24px;
@@ -108,5 +114,67 @@ img {
     width: 24px;
     height: 24px;
     margin: 0 5px;
+  }
+}
+
+// buttons
+
+.btn-container {
+  @include flex($justify-content: start, $gap: 20px);
+}
+%btn-shared {
+  max-width: 224px;
+  min-height: 45px;
+  border-radius: 1.4rem;
+  padding: 10px 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-grow: 1;
+}
+.btn-primary {
+  @extend %btn-shared;
+  border: 1px solid transparent;
+  color: white;
+  background-color: var(--primary-color);
+}
+.btn-ghost {
+  @extend %btn-shared;
+  @include flex($justify-content: space-evenly);
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+
+  &__icon-container {
+    width: 21px;
+    height: 21px;
+    margin-bottom: 5px;
+  }
+}
+
+/* HERO SECTION */
+.hero-section {
+  min-height: 100vh;
+  background-color: #15102a;
+  &__content {
+    padding: 0 10px;
+    max-width: 500px;
+    &__title {
+      max-width: 380px;
+      color: var(--theme-secondary);
+      // font-weight: 700;
+      font-size: 3.5rem;
+
+      span {
+        color: var(--primary-color);
+      }
+    }
+
+    &__desc {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #a4a4a4;
+
+      line-height: 40px;
+    }
   }
 }

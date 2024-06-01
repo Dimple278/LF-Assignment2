@@ -7,6 +7,9 @@
 html {
   font-size: 16px;
   font-family: sans-serif;
+  --primary-color: #f14a16;
+  --theme-primary: black;
+  --theme-secondary: white;
 }
 
 img {
@@ -58,7 +61,7 @@ img {
 .header__hamburger-icon-wrapper {
   width: 30px;
   height: 30px;
-  margin-right: 20px; /* Add space between hamburger icon and logo */
+  margin-right: 20px;
 }
 .header__logo-wrapper {
   width: 100px;
@@ -85,7 +88,9 @@ img {
   justify-content: start;
   align-items: center;
   gap: 2px;
-  border: 2px solid green;
+}
+.header__search-bar:active {
+  background-color: red;
 }
 .header__search-bar__icon-wrapper {
   width: 24px;
@@ -112,4 +117,68 @@ img {
   width: 24px;
   height: 24px;
   margin: 0 5px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-ghost, .btn-primary {
+  max-width: 224px;
+  min-height: 45px;
+  border-radius: 1.4rem;
+  padding: 10px 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-grow: 1;
+}
+
+.btn-primary {
+  border: 1px solid transparent;
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.btn-ghost {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2px;
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+.btn-ghost__icon-container {
+  width: 21px;
+  height: 21px;
+  margin-bottom: 5px;
+}
+
+/* HERO SECTION */
+.hero-section {
+  min-height: 100vh;
+  background-color: #15102a;
+}
+.hero-section__content {
+  padding: 0 10px;
+  max-width: 500px;
+}
+.hero-section__content__title {
+  max-width: 380px;
+  color: var(--theme-secondary);
+  font-size: 3.5rem;
+}
+.hero-section__content__title span {
+  color: var(--primary-color);
+}
+.hero-section__content__desc {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #a4a4a4;
+  line-height: 40px;
 }/*# sourceMappingURL=style.css.map */
