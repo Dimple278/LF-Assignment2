@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Mixins */
+/* Header */
+.header {
+  padding: 10px;
+  background-color: #000;
+}
+.header .header__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+  margin-top: 20px;
+}
+.header .header__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 2px;
+}
+.header .header__center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-grow: 1;
+}
+.header .header__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.header nav {
+  display: inline-block;
+}
+.header__hamburger-icon-wrapper {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px; /* Add space between hamburger icon and logo */
+}
+.header__logo-wrapper {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.header__cart-icon-wrapper {
+  width: 30px;
+  height: 30px;
+}
+.header__search-bar {
+  margin-top: 10px;
+  padding: 0 10px;
+  border-radius: 50px;
+  min-width: 250px;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 2px;
+  border: 2px solid green;
+}
+.header__search-bar__icon-wrapper {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.header__search-bar__input {
+  border: none;
+  flex-grow: 1;
+}
+.header__search-bar__input:focus {
+  outline: none;
+}
+
+.theme {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 2px;
+  margin-right: 30px;
+}
+.theme__icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+}/*# sourceMappingURL=style.css.map */
