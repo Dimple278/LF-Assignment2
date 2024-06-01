@@ -415,4 +415,38 @@ img {
 }
 .new-arrivals__card__detail {
   background: rgb(55, 6, 101);
+}
+
+.qr-with-download-info {
+  margin: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px;
+  text-align: center;
+  border-radius: 20px;
+  background: linear-gradient(to left, rgb(76, 79, 169), rgb(55, 6, 101));
+}
+.qr-with-download-info__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.qr-with-download-info__title {
+  font-size: 1.2rem;
+}
+.qr-with-download-info__qr-wrapper {
+  width: 120px;
+  height: 120px;
+}
+.qr-with-download-info__small-img-wrapper-1 {
+  margin-top: 10px;
+  width: 110px;
+}
+.qr-with-download-info__small-img-wrapper-2 {
+  width: 190px;
 }/*# sourceMappingURL=style.css.map */

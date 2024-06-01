@@ -397,3 +397,33 @@ img {
     background: rgba(55, 6, 101, 1);
   }
 }
+.qr-with-download-info {
+  margin: 30px 20px;
+  @include flex($flex-direction: column, $gap: 10px);
+  padding: 20px 10px;
+  text-align: center;
+  border-radius: 20px;
+  background: linear-gradient(to left, rgb(76, 79, 169), rgba(55, 6, 101, 1));
+
+  &__about {
+    @include flex($flex-direction: column);
+  }
+
+  &__title {
+    font-size: 1.2rem;
+  }
+
+  &__qr-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  &__small-img-wrapper-1 {
+    margin-top: 10px;
+    width: 110px;
+  }
+
+  &__small-img-wrapper-2 {
+    width: 190px;
+  }
+}
