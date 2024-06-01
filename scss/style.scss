@@ -251,3 +251,50 @@ img {
     font-size: 1.2rem;
   }
 }
+/* why buy article */
+.why-buy {
+  @include flex(
+    $flex-direction: column,
+    $justify-content: start,
+    $align-items: center
+  );
+  border-radius: 20px;
+  padding: 20px 10px;
+  color: white;
+  text-align: center;
+  border: 1px solid green;
+  margin: 10px 20px;
+  background-color: pink;
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__item-list {
+    padding: 0px;
+    width: 50%;
+    flex-grow: 0;
+    gap: 0;
+    flex-direction: column;
+    border: 1px solid red;
+  }
+}
+
+.item {
+  padding: 20px 10px;
+
+  @include flex();
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  min-width: 137px;
+  &__title {
+    font-size: 1.1rem;
+    white-space: wrap;
+    background-color: green;
+    flex-basis: 100px;
+    flex-grow: 1;
+  }
+
+  &__icon-wrapper {
+    width: 30px;
+    height: 30px;
+  }
+}

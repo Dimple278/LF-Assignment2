@@ -262,4 +262,54 @@ img {
 .trend-item-card__price {
   color: rgb(252, 153, 24);
   font-size: 1.2rem;
+}
+
+/* why buy article */
+.why-buy {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 2px;
+  border-radius: 20px;
+  padding: 20px 10px;
+  color: white;
+  text-align: center;
+  border: 1px solid green;
+  margin: 10px 20px;
+  background-color: pink;
+}
+.why-buy__title {
+  font-size: 1.5rem;
+}
+.why-buy__item-list {
+  padding: 0px;
+  width: 50%;
+  flex-grow: 0;
+  gap: 0;
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+.item {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  min-width: 137px;
+}
+.item__title {
+  font-size: 1.1rem;
+  white-space: wrap;
+  background-color: green;
+  flex-basis: 100px;
+  flex-grow: 1;
+}
+.item__icon-wrapper {
+  width: 30px;
+  height: 30px;
 }/*# sourceMappingURL=style.css.map */
