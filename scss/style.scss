@@ -5,9 +5,11 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 14px;
   font-family: sans-serif;
-  --primary-color: #f14a16;
+  --primary-color: rgba(241, 74, 22, 1);
+  --primary-hover-color: rgb(243, 227, 222);
+  --ghost-hover-color: rgb(243, 227, 222);
   $primary-color: var(--primary-color);
   --theme-primary: black;
   --theme-secondary: white;
@@ -19,7 +21,7 @@ img {
   object-fit: cover;
 }
 
-/* Mixins */
+// Mixins
 @mixin flex(
   $flex-direction: row,
   $justify-content: center,
@@ -33,207 +35,72 @@ img {
   gap: $gap;
 }
 
-/* Header */
-.header {
-  padding: 10px;
-  background-color: #000;
-
-  .header__top {
-    @include flex($justify-content: space-between, $align-items: center);
-    margin-top: 20px;
-  }
-
-  .header__left {
-    @include flex($justify-content: start, $align-items: center);
-  }
-
-  .header__center {
-    @include flex($justify-content: center, $align-items: center);
-    flex-grow: 1;
-  }
-
-  .header__right {
-    @include flex($justify-content: flex-end, $align-items: center, $gap: 10px);
-  }
-
-  nav {
-    display: inline-block;
-  }
-
-  &__hamburger-icon-wrapper {
-    width: 30px;
-    height: 30px;
-    margin-right: 20px;
-  }
-
-  &__logo-wrapper {
-    width: 100px;
-    height: 40px;
-    @include flex($justify-content: center, $align-items: center);
-  }
-
-  &__cart-icon-wrapper {
-    width: 30px;
-    height: 30px;
-  }
-
-  &__search-bar {
-    margin-top: 10px;
-    padding: 0 10px;
-    border-radius: 50px;
-    min-width: 250px;
-    height: 40px;
-    background-color: white;
-    @include flex($justify-content: start, $align-items: center);
-
-    &:active {
-      background-color: red;
-    }
-    &__icon-wrapper {
-      width: 24px;
-      height: 24px;
-      margin-right: 10px;
-    }
-
-    &__input {
-      border: none;
-      flex-grow: 1;
-
-      &:focus {
-        outline: none;
-      }
-    }
-  }
-}
-
-.theme {
-  @include flex($justify-content: start, $align-items: center);
-  margin-right: 30px;
-
-  &__icon {
-    width: 24px;
-    height: 24px;
-    margin: 0 5px;
-  }
-}
-
 // buttons
 
 .btn-container {
   @include flex($justify-content: start, $gap: 20px);
 }
-%btn-shared {
+
+.btn {
   max-width: 224px;
   min-height: 45px;
-  border-radius: 1.4rem;
+  border-radius: 1rem;
   padding: 10px 10px;
   font-size: 1rem;
   font-weight: 700;
   flex-grow: 1;
-}
-.btn-primary {
-  @extend %btn-shared;
-  border: 1px solid transparent;
-  color: white;
-  background-color: var(--primary-color);
-}
-.btn-ghost {
-  @extend %btn-shared;
-  @include flex($justify-content: space-evenly);
-  border: 3px solid var(--primary-color);
-  color: var(--primary-color);
-  background-color: transparent;
 
-  &__icon-container {
-    width: 21px;
-    height: 21px;
-    margin-bottom: 5px;
+  &:hover {
+    background-color: var(--hover-color);
+    color: white;
   }
-}
+  &--primary {
+    border: 1px solid transparent;
+    color: white;
+    background-color: var(--primary-color);
+  }
 
-/* HERO SECTION */
-.hero-section {
-  min-height: 100vh;
-  background-color: #15102a;
-  &__content {
-    padding: 0 10px;
-    max-width: 500px;
-    &__title {
-      max-width: 380px;
-      color: var(--theme-secondary);
-      // font-weight: 700;
-      font-size: 3.5rem;
+  &--ghost {
+    @include flex($justify-content: center, $gap: 5px);
+    border: 3px solid var(--primary-color);
+    color: var(--primary-color);
+    // border-radius: 1.4rem;
+    background-color: transparent;
 
-      span {
-        color: var(--primary-color);
-      }
-    }
-
-    &__desc {
-      margin-top: 20px;
-      font-size: 1.1rem;
-      color: #a4a4a4;
-
-      line-height: 40px;
+    &__icon-container {
+      width: 21px;
+      height: 21px;
+      margin-bottom: 5px;
     }
   }
-  &__flex-wrapper {
-    margin-top: 20px;
-    @include flex($flex-direction: column);
-  }
-
-  &__item-list {
-    flex-basis: 250px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    border: 1px solid red;
-    max-width: 100vw;
-    list-style-type: none;
-    @include flex($gap: 20px, $justify-content: flex-end);
-    overflow: hidden;
-    padding: 20px;
-  }
-
-  &__card {
-    min-height: 200px;
-    min-width: 250px;
-    background-color: pink;
-  }
-
-  &__down-arrow {
-    margin-top: 50px;
-    min-height: 100px;
-    display: inline-block;
-  }
-}
-/* Popular Trends Section */
-
-.trend {
-  background-color: aqua;
-
-  &__title {
-    text-align: center;
-    font-size: 2.8rem;
-    color: var(--theme-secondary);
-    margin-bottom: 3 0px;
-  }
-
-  &__item-list {
-    padding: 10px;
-    margin-left: 20px;
-    @include flex();
-    background-color: grey;
-  }
 }
 
-.trend-item-card {
-  width: 250px;
-  min-height: 465px;
+.list {
+  list-style-type: none;
+}
+
+/* Card */
+.card {
+  border-radius: 10%;
+  flex-basis: 250px;
+  flex-grow: 0;
+
   color: var(--theme-secondary);
-  background-image: linear-gradient(0deg, rgb(64, 63, 63), rgb(252, 248, 248));
-  border-radius: 50px;
+  border-radius: 10%;
+
+  &__img-wrapper {
+    height: 210px;
+  }
   &__detail {
-    padding: 0 20px;
+    background-image: linear-gradient(
+      0deg,
+      rgb(64, 63, 63),
+      rgb(118, 116, 116)
+    );
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+
+    padding: 10px 20px;
     @include flex($flex-direction: column, $align-items: start, $gap: 10px);
   }
 
@@ -250,9 +117,239 @@ img {
     color: rgba(252, 153, 24, 1);
     font-size: 1.2rem;
   }
+
+  &__btn {
+    font-size: 0.6rem;
+    flex-grow: 0;
+    flex-basis: 100px;
+  }
+
+  &__btn-container {
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+  }
 }
+
+/* item-list  */
+.item-list {
+  flex-basis: 250px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  list-style-type: none;
+  justify-content: start;
+  @include flex($gap: 20px, $justify-content: start);
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* search bar */
+.search-bar {
+  padding: 0 10px;
+  // flex-grow: 1;
+  width: 100%;
+  border-radius: 50px;
+  height: 34px;
+  background-color: white;
+  @include flex($justify-content: start, $align-items: center);
+
+  &:active {
+    background-color: red;
+  }
+  &__icon-wrapper {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__input {
+    border: none;
+    flex-grow: 1;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+/*
+Header
+*/
+
+.header {
+  position: absolute;
+  width: 100%;
+  padding: 0px 10px;
+  flex-wrap: wrap;
+  min-height: 140px;
+  @include flex($flex-direction: column, $justify-content: start);
+
+  &__row {
+    width: 100%;
+    // align-items: baseline;
+  }
+
+  &__row--1 {
+    @include flex($justify-content: space-between);
+  }
+
+  &__row--2 {
+    padding: 0 10px;
+    @include flex();
+  }
+
+  nav {
+    display: inline-block;
+  }
+
+  &__hamburger-icon-wrapper {
+    width: 21px;
+    height: 21px;
+  }
+
+  &__logo-wrapper {
+    margin-left: calc(100vw / 4);
+    width: 60px;
+    height: 60px;
+  }
+
+  &__cart-icon-wrapper {
+    width: 18px;
+    height: 18px;
+  }
+
+  //   background for hero
+  //   background: radial-gradient(
+  //     circle,
+  //     rgb(27, 56, 90) 32%,
+  //     rgb(21, 47, 82) 58%,
+  //     rgb(12, 24, 46) 96%
+  //   );
+}
+
+.theme-toggler {
+  position: relative;
+  min-width: 50px;
+  padding: 5px 0px;
+  background-color: black;
+  border-radius: 20px;
+  @include flex($justify-content: space-between);
+
+  &__shade {
+    right: 0;
+    position: absolute;
+    width: 25px;
+    background-color: grey;
+    height: 25px;
+    border-radius: 50%;
+  }
+
+  &__shade:hover {
+    background-color: rgb(79, 79, 79);
+  }
+  &__icon {
+    width: 25px;
+    height: 20px;
+  }
+}
+
+body {
+  position: relative;
+  background-color: var(--theme-primary);
+  color: var(--theme-secondary);
+}
+
+/* HERO SECTION */
+.hero-section {
+  height: 100vh;
+  // background: linear-gradient(40deg, rgb(43, 45, 100), rgb(11, 11, 14));
+  background: radial-gradient(
+    circle at left,
+    rgb(42, 42, 76),
+    rgb(24, 23, 28),
+    rgb(12, 12, 12)
+  );
+  padding-top: 120px;
+  &__content {
+    padding: 0 10px;
+    max-width: 300px;
+    max-height: 400px;
+    &__title {
+      color: var(--theme-secondary);
+      // font-weight: 700;
+      font-size: 1.8rem;
+
+      span {
+        color: var(--primary-color);
+      }
+    }
+
+    &__desc {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: rgba(164, 164, 164, 1);
+      line-height: 40px;
+      max-height: 60px;
+      overflow: hidden;
+    }
+  }
+
+  &__flex-wrapper {
+    margin-top: 20px;
+    @include flex($flex-direction: column);
+  }
+
+  &__item-list {
+    flex-basis: 150px;
+    height: 100px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: 1px solid red;
+    max-width: 100vw;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  &__card {
+    min-height: 200px;
+    min-width: 250px;
+    background-color: pink;
+  }
+
+  &__arrow-down-container {
+    margin-top: 50px;
+    min-height: 50px;
+    display: inline- block;
+  }
+
+  &__btn-container {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__btn {
+    padding: 15px 0;
+  }
+}
+
+/* Popular Trends Section */
+
+.trend {
+  min-height: 100vh;
+  border: 1px solid red;
+  background: linear-gradient(180deg, rgb(29, 28, 42), black);
+  overflow: hidden;
+  &__title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--theme-secondary);
+    margin-bottom: 3 0px;
+  }
+}
+
 /* why buy article */
 .why-buy {
+  min-height: 100vh;
   @include flex(
     $flex-direction: column,
     $justify-content: start,
@@ -264,10 +361,10 @@ img {
   text-align: center;
   border: 1px solid green;
   margin: 10px 20px;
-  background-color: pink;
   &__title {
     font-size: 1.5rem;
   }
+
   &__item-list {
     padding: 0px;
     width: 50%;
@@ -299,7 +396,7 @@ img {
   }
 }
 
-/* Exclusive offer section */
+/* Exclusive offer */
 .exclusive-offer {
   border: 1px solid orange;
   margin: 10px;
@@ -328,6 +425,7 @@ img {
       background-color: transparent;
     }
   }
+
   &__detail {
     margin-top: 20px;
     border: 1px solid blue;
@@ -377,16 +475,19 @@ img {
 .other-accessories {
   text-align: center;
   font-size: 1.5rem;
+
+  &__item-list {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex-basis: 700px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0;
+  }
 }
-.other-accessories__item-list {
-  flex-wrap: wrap;
-}
-.other-accessories__item {
-  flex-basis: 700px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  padding: 0;
-}
+
 .new-arrivals {
   &__title {
     font-size: 2rem;
@@ -397,7 +498,8 @@ img {
     background: rgba(55, 6, 101, 1);
   }
 }
-.qr-with-download-info {
+
+.qr-and-download-info {
   margin: 30px 20px;
   @include flex($flex-direction: column, $gap: 10px);
   padding: 20px 10px;
