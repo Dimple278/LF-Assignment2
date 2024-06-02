@@ -303,7 +303,7 @@ body {
   padding-top: 120px;
   &__content {
     padding: 0 10px;
-    max-width: 350px;
+    max-width: 340px;
     max-height: 400px;
     border: 1px solid green;
     &__title {
@@ -436,7 +436,6 @@ body {
   }
 
   &__item-list {
-    background-color: pink;
     align-items: start;
     padding: 10px;
   }
@@ -500,6 +499,13 @@ body {
   border: 1px solid orange;
   margin: 10px;
   min-height: 100vh;
+
+  &--bg {
+    display: none;
+  }
+  &--sm {
+    display: flex;
+  }
 
   @include flex($flex-direction: column);
   &__title {
@@ -724,7 +730,7 @@ body {
   font-weight: 700;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 798px) {
   .header {
     justify-content: center;
     border: 1px solid pink;
@@ -796,9 +802,9 @@ body {
 
   /* hero section*/
   .hero-section {
+    border: 2px solid yellow;
     padding-top: 140px;
     &__content {
-      margin-top: 20px;
       max-width: 50%;
       min-height: 400px;
       border: 1px solid pink;
@@ -817,6 +823,7 @@ body {
     &__btn-container {
       border: 1px solid purple;
       height: 60px;
+      justify-content: flex-start;
     }
 
     &__btn {
@@ -825,6 +832,7 @@ body {
 
     &__item-list {
       flex-grow: 1;
+      min-height: 180px;
     }
     &__arrow-down-container {
       flex-basis: 40%;
@@ -834,6 +842,83 @@ body {
       &__wrapper {
         width: 60px;
       }
+    }
+  }
+
+  .trend {
+    border: 1px solid green;
+    padding-top: 40px;
+    &__item-list {
+      padding: 20px;
+      border: 1px solid red;
+    }
+  }
+
+  .why-buy {
+    &__item-list {
+      width: 100%;
+      flex-basis: auto;
+      flex-direction: row;
+      flex-grow: 1;
+      justify-content: center;
+      .item {
+        // background-color: red;
+      }
+    }
+  }
+
+  .exclusive-offer {
+    &--bg {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    &--sm {
+      display: none;
+    }
+
+    &__img-wrapper {
+      border: 1px solid red;
+      flex-basis: 400px;
+      flex-shrink: 1;
+      height: fit-content;
+    }
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__detail {
+      border: 1px solid pink;
+      background-color: red;
+      flex-shrink: 1;
+      width: 40%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .exclusive-offer {
+    height: 100vh;
+    &__title {
+      margin-bottom: 80px;
+    }
+    &__detail {
+      background-color: transparent;
+    }
+
+    &__btn-container {
+      justify-content: center;
+    }
+
+    &__btn {
+      flex-basis: 250px;
+      flex-grow: 0;
+      padding: 20px;
+    }
+  }
+
+  .time-left {
+    &__value__info {
+      font-size: 2rem;
     }
   }
 }

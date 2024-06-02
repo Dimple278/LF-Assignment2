@@ -285,7 +285,7 @@ body {
 }
 .hero-section__content {
   padding: 0 10px;
-  max-width: 350px;
+  max-width: 340px;
   max-height: 400px;
   border: 1px solid green;
 }
@@ -398,7 +398,6 @@ body {
   margin-bottom: 3 0px;
 }
 .trend__item-list {
-  background-color: pink;
   align-items: start;
   padding: 10px;
 }
@@ -466,6 +465,12 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2px;
+}
+.exclusive-offer--bg {
+  display: none;
+}
+.exclusive-offer--sm {
+  display: flex;
 }
 .exclusive-offer__title {
   text-align: center;
@@ -691,7 +696,7 @@ body {
   font-weight: 700;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 798px) {
   .header {
     justify-content: center;
     border: 1px solid pink;
@@ -759,10 +764,10 @@ body {
   }
   /* hero section*/
   .hero-section {
+    border: 2px solid yellow;
     padding-top: 140px;
   }
   .hero-section__content {
-    margin-top: 20px;
     max-width: 50%;
     min-height: 400px;
     border: 1px solid pink;
@@ -779,12 +784,14 @@ body {
   .hero-section__btn-container {
     border: 1px solid purple;
     height: 60px;
+    justify-content: flex-start;
   }
   .hero-section__btn {
     padding: 10px 15px;
   }
   .hero-section__item-list {
     flex-grow: 1;
+    min-height: 180px;
   }
   .hero-section__arrow-down-container {
     flex-basis: 40%;
@@ -798,5 +805,66 @@ body {
   }
   .hero-section__arrow-down-container__wrapper {
     width: 60px;
+  }
+  .trend {
+    border: 1px solid green;
+    padding-top: 40px;
+  }
+  .trend__item-list {
+    padding: 20px;
+    border: 1px solid red;
+  }
+  .why-buy__item-list {
+    width: 100%;
+    flex-basis: auto;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  .exclusive-offer--bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .exclusive-offer--sm {
+    display: none;
+  }
+  .exclusive-offer__img-wrapper {
+    border: 1px solid red;
+    flex-basis: 400px;
+    flex-shrink: 1;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .exclusive-offer__title {
+    margin-bottom: 40px;
+  }
+  .exclusive-offer__detail {
+    border: 1px solid pink;
+    background-color: red;
+    flex-shrink: 1;
+    width: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .exclusive-offer {
+    height: 100vh;
+  }
+  .exclusive-offer__title {
+    margin-bottom: 80px;
+  }
+  .exclusive-offer__detail {
+    background-color: transparent;
+  }
+  .exclusive-offer__btn-container {
+    justify-content: center;
+  }
+  .exclusive-offer__btn {
+    flex-basis: 250px;
+    flex-grow: 0;
+    padding: 20px;
+  }
+  .time-left__value__info {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */
