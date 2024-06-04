@@ -244,12 +244,6 @@ Header
     }
   }
 
-  &__row-1 {
-  }
-
-  &__row-2 {
-  }
-
   &__icons-container {
     @include flex($gap: 20px);
     &__search-icon-wrapper {
@@ -286,14 +280,6 @@ Header
   &__login-btn {
     display: none;
   }
-
-  //   background for hero
-  //   background: radial-gradient(
-  //     circle,
-  //     rgb(27, 56, 90) 32%,
-  //     rgb(21, 47, 82) 58%,
-  //     rgb(12, 24, 46) 96%
-  //   );
 }
 
 .theme-toggler {
@@ -337,13 +323,6 @@ body {
   min-height: 100vh;
   overflow: hidden;
   background: var(--dark-hero-bg-color);
-  // background: radial-gradient(
-  //   at center left,
-  //   rgb(27, 56, 90) 32%,
-  //   rgb(15, 29, 48) 58%,
-  //   rgb(28, 19, 79) 80%,
-  //   rgb(28, 19, 79) 96%
-  // );
 
   &__content-wrapper {
     @include flex($justify-content: start);
@@ -409,18 +388,6 @@ body {
     min-width: 200px;
     background: linear-gradient(to left, rgb(10, 15, 34), rgb(111, 112, 115));
     border-radius: 20px;
-
-    // &::before {
-    //   object-fit: cover;
-    //   display: inline-block;
-    //   width: 50px;
-    //   height: 50px;
-    //   left: 0;
-    //   top: 0;
-    //   transform: translate(40%, -60%);
-    //   position: absolute;
-    //   content: url("../img/read-headphone.png");
-    // }
 
     &__img-wrapper {
       width: 80px;
@@ -980,7 +947,6 @@ body {
       flex-basis: 400px;
       flex-shrink: 1;
       height: fit-content;
-      animation: offer-animation 2s ease-in-out 0s infinite;
     }
     &__title {
       margin-bottom: 40px;
@@ -1048,8 +1014,7 @@ body {
   .rights-reserved {
     grid-area: rights-reserved;
   }
-  .footer > * {
-  }
+
   .footer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 20px;

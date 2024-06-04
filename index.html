@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Musify</title>
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="./scss/style.css" />
   </head>
   <body>
     <!-- header -->
     <header class="header">
       <!-- header row 1 -->
-      <div class="header__row header__row--1">
+      <div class="header__row header__row__nav">
         <!-- nav -->
 
         <nav class="nav">
@@ -28,7 +29,9 @@
         </nav>
         <!-- logo -->
         <div class="header__logo-wrapper">
-          <img src="./img/logo.png" alt="" />
+          <a href="#">
+            <img src="./img/logo.png" alt="" />
+          </a>
         </div>
         <!-- header icons container -->
         <div class="header__icons-container">
@@ -51,24 +54,24 @@
           </div>
           <!-- cart -->
           <div class="header__icons-container__cart-icon-wrapper">
-            <img src="./icon/light-.png" alt="" />
+            <img src="./icon/light-cart.png" alt="" />
+            <img class="hide" src="./icon/dark-cart.png" alt="" />
           </div>
         </div>
 
         <button class="btn btn--ghost header__login-btn">Login</button>
       </div>
       <!-- header row 2 -->
-      <div class="header__row header__row--2">
+      <div class="header__row header__row__searchBar">
         <!-- header search bar -->
         <div class="search-bar">
           <div class="search-bar__icon-wrapper">
-            <img src="./icon/search.png" alt="" />
+            <img src="./icon/dark-search.png" alt="" />
           </div>
           <input type="text" class="search-bar__input" placeholder="Search" />
         </div>
       </div>
     </header>
-    <!-- hero -->
     <!-- hero -->
     <section class="hero-section">
       <!-- hero content -->
