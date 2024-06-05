@@ -9,13 +9,11 @@ const arrowDownContainer = document.querySelector(
 );
 const arrowDownImages = arrowDownContainer.querySelectorAll("img");
 const cartImages = cartIconContainer.querySelectorAll("img");
-console.log(cartImages);
 
 const searchIconContainer = document.querySelector(
   ".header__icons-container__search-icon-wrapper"
 );
 const searchImages = searchIconContainer.querySelectorAll("img");
-console.log(searchImages);
 
 const htmlStyles = getComputedStyle(htmlElement);
 const heroSection = document.querySelector(".hero-section");
@@ -28,7 +26,6 @@ const theme = {
   primaryHeroBackground: heroSectionStyles.background,
   secondaryHeroBackground: "white",
 };
-console.log(theme);
 
 let isDarkMode = true;
 
@@ -39,10 +36,7 @@ function switchTheme(e) {
   htmlElement.style.setProperty("--theme-secondary", theme.primaryColor);
   heroSection.style.setProperty("background", theme.secondaryHeroBackground);
 
-  console.log(themeTogglerShade.offsetWidth);
-  console.log(isDarkMode);
   themeTogglerShade.style.setProperty("left", isDarkMode ? "4px" : "27px");
-  console.log(themeToggler);
 
   // Swap theme colors
   [theme.primaryColor, theme.secondaryColor] = [
@@ -53,7 +47,6 @@ function switchTheme(e) {
     theme.secondaryHeroBackground,
     theme.primaryHeroBackground,
   ];
-  console.log(theme);
 
   isDarkMode = !isDarkMode;
   searchImages.forEach((searchImage) => searchImage.classList.toggle("hide"));
