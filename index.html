@@ -8,13 +8,34 @@
     <link rel="stylesheet" href="./scss/style.css" />
   </head>
   <body>
+    <!-- header -->
     <header class="header">
       <div class="header__row header__row__nav">
         <!-- nav -->
+
         <nav class="nav">
+          <!-- icon-container -->
           <div class="header__hamburger-icon-wrapper">
-            <img src="./icon/hamburger.png" alt="hamburger icon" />
+            <img src="./icon/dark-hamburger.png" alt="hamburger icon" />
+            <img
+              class="hide"
+              src="./icon/light-hamburger.png"
+              alt="hamburger icon light"
+            />
           </div>
+          <div class="mb-nav-container hide">
+            <ul class="nav__links nav__links--mb">
+              <li><a href="#" class="nav__link nav__link--active">Home</a></li>
+              <li><a href="#" class="nav__link">Explore</a></li>
+              <li>
+                <a href="#" class="nav__link">Contact Us</a>
+              </li>
+            </ul>
+            <div class="cross-icon">
+              <img src="./icon/cross.png" alt="" />
+            </div>
+          </div>
+
           <ul class="nav__links">
             <li><a href="#" class="nav__link nav__link--active">Home</a></li>
             <li><a href="#" class="nav__link">Explore</a></li>
@@ -74,7 +95,8 @@
       <div class="hero-section__content-wrapper">
         <div class="hero-section__content">
           <h1 class="hero-section__content__title">
-            Let's Dive in <span>Music</span> World
+            Let's Dive in
+            <span>Music</span> World
           </h1>
           <p class="hero-section__content__desc">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
@@ -93,7 +115,7 @@
           </div>
         </div>
         <div class="hero-img">
-          <img src="./img/hero-model.png" alt="" srcset="" />
+          <img src="./img/hero-model.png" alt="" />
         </div>
       </div>
 
@@ -226,13 +248,9 @@
         <div class="hero-section__arrow-down-container">
           <a href="#trend ">
             <div class="hero-section__arrow-down-container__wrapper">
-              <img src="./icon/dark-arrow-down.png" alt="dark arrow icon" />
+              <img src="./icon/dark-arrow-down.png" alt="" />
 
-              <img
-                class="hide"
-                src="./icon/light-arrow-down.png"
-                alt="light arrow icon"
-              />
+              <img class="hide" src="./icon/light-arrow-down.png" alt="" />
             </div>
           </a>
         </div>
@@ -448,11 +466,11 @@
             <p class="time-left__value__title">Hour</p>
           </div>
           <div class="time-left__value">
-            <p class="time-left__value__info time-left__value__hour">02</p>
+            <p class="time-left__value__info time-left__value__min">38</p>
             <p class="time-left__value__title">Mins</p>
           </div>
           <div class="time-left__value">
-            <p class="time-left__value__info time-left__value__hour">02</p>
+            <p class="time-left__value__info time-left__value__sec">49</p>
             <p class="time-left__value__title">Secs</p>
           </div>
         </div>
@@ -475,11 +493,11 @@
             <p class="time-left__value__title">Hour</p>
           </div>
           <div class="time-left__value">
-            <p class="time-left__value__info time-left__value__hour">02</p>
+            <p class="time-left__value__info time-left__value__min">38</p>
             <p class="time-left__value__title">Mins</p>
           </div>
           <div class="time-left__value">
-            <p class="time-left__value__info time-left__value__hour">02</p>
+            <p class="time-left__value__info time-left__value__sec">49</p>
             <p class="time-left__value__title">Secs</p>
           </div>
         </div>
@@ -511,7 +529,7 @@
 
     <section class="new-arrivals">
       <h2 class="new-arrivals__title">New Arrivals</h2>
-      <div class="item-list">
+      <div class="item-list new-arrivals__item-list">
         <section class="card new-arrivals__card">
           <div class="card__img-wrapper">
             <img src="./img/brown-headphone.png" alt="" />
@@ -873,7 +891,7 @@
           ><img src="./img/footer-logo.png" alt="company logo"
         /></a>
       </div>
-      <p class="rights-reserved">&copy 2022.Musify.All Rights Reserved</p>
+      <p class="rights-reserved">&copy; 2022.Musify.All Rights Reserved</p>
     </footer>
     <script src="script.js"></script>
   </body>
