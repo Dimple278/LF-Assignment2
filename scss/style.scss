@@ -52,7 +52,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Proxima Nova", sans-serif, "Proxima Nova Rg";
+  max-width: 1200px;
+  margin: auto;
 }
+
 ::-webkit-scrollbar {
   height: 5px;
 }
@@ -945,8 +948,8 @@ body {
       margin: 0;
       position: absolute;
 
-      left: 35px;
-      top: 10px;
+      left: 14px;
+      top: -49px;
     }
 
     &__login-btn {
@@ -975,6 +978,7 @@ body {
   .nav {
     &__links {
       margin: 0px;
+      margin-left: 413px;
       display: block;
       list-style-type: none;
       @include flex($gap: 20px);
@@ -998,6 +1002,7 @@ body {
     z-index: 9;
     &__content-wrapper {
       // @include flex($align-items: start);
+
       .hero-img {
         position: relative;
         right: -4%;
@@ -1037,7 +1042,7 @@ body {
     }
 
     &__btn {
-      padding: 10px 15px;
+      padding: 10px 33px;
     }
 
     &__item-list {

@@ -51,6 +51,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Proxima Nova", sans-serif, "Proxima Nova Rg";
+  max-width: 1200px;
+  margin: auto;
 }
 
 ::-webkit-scrollbar {
@@ -891,8 +893,8 @@ body {
     order: 0;
     margin: 0;
     position: absolute;
-    left: 35px;
-    top: 10px;
+    left: 14px;
+    top: -49px;
   }
   .header__login-btn {
     display: block;
@@ -912,6 +914,7 @@ body {
   }
   .nav__links {
     margin: 0px;
+    margin-left: 413px;
     display: block;
     list-style-type: none;
     display: flex;
@@ -965,7 +968,7 @@ body {
     align-items: stretch;
   }
   .hero-section__btn {
-    padding: 10px 15px;
+    padding: 10px 33px;
   }
   .hero-section__item-list {
     flex-grow: 1;
